@@ -18,6 +18,13 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="homework3.cpp" />
+    <ClCompile Include="Validate.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Validation.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{DA8F8DA6-26FA-4A9A-A821-43CC08867D20}</ProjectGuid>
     <RootNamespace>Tutorial002</RootNamespace>
@@ -109,9 +116,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Tutorial002.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
