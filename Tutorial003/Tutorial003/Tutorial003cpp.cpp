@@ -1,9 +1,12 @@
 #include <iostream>
+#include <iomanip>
+#include <string>   
 
 using namespace std;
 
 int AsciiToInteger(char *num_string);
 double AsciiToFloat(char *num_string);
+void PrintAsciiCodeChart();
 
 int main(int argc, char *argv[])
 {
@@ -16,6 +19,9 @@ int main(int argc, char *argv[])
 	ret = AsciiToFloat(data);
 
 	cout << "Numeric value of " << "\"" << data << "\" " <<  ret << endl;
+
+	PrintAsciiCodeChart();
+
 
 	return 0;
 
@@ -65,4 +71,23 @@ double AsciiToFloat(char *num_string)
 		}
 	}
 	return accum;
+}
+
+void PrintAsciiCodeChart()
+{
+	int i = 0;
+	for (int rows = 0; rows < 16; rows++)
+	{
+		i = rows;
+		while (i <= 127)
+		{
+			if (i <= 15)
+				cout << hex << setw(2) << setfill('0') << i << "= " << setw(2) << setfill(' ') << to_string(i) << " | ";
+			else
+				cout << hex << setw(2) << setfill('0') << i << "= " << setw(2) << setfill(' ') << char(i) << " | ";
+			i += 16;
+		}
+
+		cout << "\n";
+	}
 }
